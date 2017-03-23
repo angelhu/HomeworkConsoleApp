@@ -25,31 +25,27 @@ namespace HomeworkConsoleApp
             Console.WriteLine(x + " marks the spot");
 
 
-            /* Ask the User for number a random number.
-               Save that number to a int
-               Use the int.TryParse() Method to parse out the number
-               If the user didnt input a number, repeat step 1 - 4 until they put in a number */
+            //Level 2 & Epic Mode:
+
             bool stopRunning = true;
 
-            while (stopRunning) { 
+            while (stopRunning)
             {
-                Console.Write("Please enter a random number: ");
-                string randomNumber = Console.ReadLine();
-                int randomNumberEntered = 0;
+                Console.Write("Hey you, please enter a random number: ");
+                string numberEntered = Console.ReadLine();
+                int numberEnteredParsed = 0;
 
-
-                if (int.TryParse(randomNumber, out randomNumberEntered))
+                if (int.TryParse(numberEntered, out numberEnteredParsed))
                 {
-                    Console.WriteLine($"You just entered {randomNumberEntered}!");
+                    Console.WriteLine($"You just entered {numberEnteredParsed}!");
                     stopRunning = false;
                 }
                 else
                 {
-                    Console.WriteLine("Uh oh, that's not a valid number.");
+                    Console.WriteLine("Uh oh, that's not a valid number...");
                 }
-            }
-        }
 
+            }
         }
     }
 }
